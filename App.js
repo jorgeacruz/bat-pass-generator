@@ -18,7 +18,19 @@ export default function App() {
         placeholderTextColor={"#000"}
         style={styles.input}
       />
-      <StatusBar style="auto" />
+      <TouchableOpacity>
+        <Text style={styles.buttom}>Generate Password</Text>
+      </TouchableOpacity>
+      <TouchableOpacity>
+        <Text style={styles.buttom}>Copy your password</Text>
+      </TouchableOpacity>
+      <Image
+        source={{
+          uri: "https://ac-landing-pages-user-uploads-production.s3.amazonaws.com/0000051657/57a99613-e158-472a-8037-77895ee89923.png",
+        }}
+        style={styles.dio_logo}
+      />
+      <StatusBar style="light" />
     </View>
   );
 }
@@ -47,5 +59,23 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 5,
     marginTop: 20,
+    textAlign: "center",
+  },
+  buttom: {
+    backgroundColor: "#fff",
+    color: "#000",
+    padding: 10,
+    borderRadius: 5,
+    marginTop: 20,
+    width: 320,
+    textAlign: "center",
+    fontWeight: "bold",
+  },
+  dio_logo: {
+    width: 100,
+    height: 50,
+    padding: 10,
+    position: "absolute",
+    bottom: 30,
   },
 });
