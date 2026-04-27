@@ -1,10 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  TextInput,
+} from "react-native";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Image source={require("./images/bat-logo.png")} style={styles.logo} />
+      <Text style={styles.title}>You can do it!</Text>
+      <TextInput
+        placeholder="Enter your text here"
+        placeholderTextColor={"#000"}
+        style={styles.input}
+      />
       <StatusBar style="auto" />
     </View>
   );
@@ -13,8 +26,26 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#000",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  title: {
+    color: "#dac807",
+    fontSize: 40,
+    fontWeight: "bold",
+    textTransform: "uppercase",
+  },
+  logo: {
+    width: 280,
+    height: 180,
+    padding: 10,
+  },
+  input: {
+    backgroundColor: "#dac807",
+    width: "80%",
+    padding: 10,
+    borderRadius: 5,
+    marginTop: 20,
   },
 });
